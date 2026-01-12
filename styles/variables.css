@@ -2,3 +2,19 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: rgba(0, 0, 40, 1); /* цвет заднего фона */
+  --main-color-text: rgba(241, 178, 206, 1); /* цвет обычного текста */
+  --title-color-text: rgba(219, 0, 255, 1); /* цвет заголовка */
+  --subtitle-color-text: rgba(0, 0, 40, 1); /* цвет текста с фоном */
+    --intermediate-text: rgba(255, 0, 112, 1); /* цвет текста h2 */
+  --accent-color: rgba(255, 0, 112, 1); /* задний фон заголовков */
+  --corner-color: rgba(255, 0, 112, 1); /* цвет уголков */
+  --page-padding: 10px;
+  --font-size: 18px;
+  --line-height: 23.4px;
+  --font-weight: 400;
+  --visible: visible;
+}

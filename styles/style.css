@@ -2,4 +2,191 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: var(--bg-color);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--main-color-text);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
 }
+
+/* header */
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr auto;
+  align-self: center;
+  padding: var(--page-padding);
+  height: 100vh;
+  position: relative;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: var(--page-padding);
+  inset-block-end: var(--page-padding);
+  border-block-end: 1px solid var(--corner-color);
+  border-inline-start: 1px solid var(--corner-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: var(--page-padding);
+  inset-block-start: var(--page-padding);
+  border-block-start: 1px solid var(--corner-color);
+  border-inline-end: 1px solid var(--corner-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.header__rec {
+  position: absolute;
+  visibility: var(--visible);
+  color: rgba(255, 0, 112, 1);
+  text-transform: uppercase;
+  inset-block-start: var(--page-padding);
+  inset-inline-end: calc(var(--page-padding) + 3px + 25px);
+}
+
+.header__rec::after {
+  content: "";
+  position: absolute;
+  visibility: var(--visible);
+  block-size: 5px;
+  inline-size: 5px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 4px rgba(255, 0, 112, 1);
+  color: rgba(255, 0, 112, 1);
+  background-color: rgba(255, 0, 112, 1);
+  inset-inline-end: -18px;
+  inset-block-start: 9px;
+}
+
+.header__title {
+  justify-self: start;
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* сделать и для планшетов размер шрифта */
+  line-height: 83%;
+  color: var(--title-color-text);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__subtitle {
+  display: flex;
+  flex-direction: column;  /* убрать перенос на мониторах */
+  max-width: 364px;
+  align-self: center;
+  justify-self: end;
+  color: var(--subtitle-color-text);
+  background-color: var(--accent-color);
+  font-size: 18px;
+}
+
+/* main */
+main {
+  padding: var(--page-padding);
+}
+
+.intermediate-text {
+  color: var(--intermediate-text);
+  font-weight: 700;
+  font-size: var(--font-size);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: var(--subtitle-color-text);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: var(--font-size);
+}
+
+.main-text {
+  color: var(--main-color-text);
+  margin: 10px 0 20px;
+}
+
+.focus-practices div div h3 {
+  font-weight: var(--font-weight);
+}
+
+.link-word {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link-word:hover {
+  border-bottom: 1px solid var(--main-color-text);
+}
+
+.link-word:focus-visible {
+  border: 1px solid var(--main-color-text);
+  outline: none;
+}
+
+/* секции */
+.focus-barriers h2 {
+  margin-top: 30px;
+}
+
+.focus-drainers h2,
+.focus-practices h2,
+.focus-images {
+  margin-top: 50px;
+}
+
+.focus-practices div .subtitle-bold {
+  margin-bottom: 20px;
+}
+
+
+/* секция с изображениями */
+.focus-images {
+  width: 100%;
+}
+
+.focus-images h2 {
+  margin-bottom: 10px;
+}
+
+.focus-images__gallery {
+  display: grid;
+  gap: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+/* footer */
+.footer {
+  padding: var(--page-padding);
+  margin-top: 40px;
+  min-width: 375px;
+  min-height: 667px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer-title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 83%;
+  color: var(--title-color-text);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
