@@ -3,6 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-color: var(--bg-color);
+  background-attachment: fixed;
   font-family: 'IBM Plex Mono', monospace;
   color: var(--main-color-text);
   font-size: var(--font-size);
@@ -29,6 +30,7 @@
 /* навигация кнопок с js */
 .header__theme-menu {
   align-self: center;
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -60,10 +62,6 @@
 }
 
 /* остальной header */
-.header__theme-menu {
-  justify-self: end;
-}
-
 .decorated-zone::before {
   content: "";
   position: absolute;
