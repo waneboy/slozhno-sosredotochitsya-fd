@@ -9,6 +9,11 @@
   font-size: var(--font-size);
   line-height: var(--line-height);
   font-weight: var(--font-weight);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* header */
@@ -18,13 +23,8 @@
   align-self: center;
   padding: var(--page-padding);
   height: 100vh;
-  width: 10;
+  min-height: 668px;
   position: relative;
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 /* навигация кнопок с js */
@@ -58,7 +58,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(var(--corner-color));
+  border: 1px solid var(--corner-color);
 }
 
 /* остальной header */
@@ -100,7 +100,7 @@
   block-size: 5px;
   inline-size: 5px;
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 4px rgba(255, 0, 112, 1);
+  box-shadow: 0 0 4px 2px var(--corner-color);
   color: rgba(255, 0, 112, 1);
   background-color: rgba(255, 0, 112, 1);
   inset-inline-end: -18px;
@@ -151,7 +151,7 @@ main {
   margin: 10px 0 20px;
 }
 
-.focus-practices div div h3 {
+.focus-practices h4 {
   font-weight: var(--font-weight);
 }
 
@@ -177,10 +177,10 @@ main {
 .focus-drainers h2,
 .focus-practices h2,
 .focus-images {
-  margin-top: var(--content-padding);
+  margin-top: calc(var(--content-padding) - 2px);
 }
 
-.focus-practices div .subtitle-bold {
+.focus-practices .subtitle-bold {
   margin-bottom: 20px;
 }
 
@@ -191,7 +191,7 @@ main {
 }
 
 .focus-images h2 {
-  margin-bottom: var(--image-gap);
+  margin-bottom: calc(var(--image-gap) + 2px);
 }
 
 .focus-images__gallery {
@@ -206,7 +206,7 @@ img {
 /* footer */
 .footer {
   padding: var(--page-padding);
-  margin-top: 40px;
+  margin-top: 32px;
   height: 100vh;
   min-height: 667px;
   display: flex;
@@ -220,7 +220,7 @@ img {
   font-weight: 700;
   line-height: 83%;
   color: var(--title-color-text);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /* media */
@@ -252,6 +252,10 @@ img {
     justify-content: space-between;
   }
 
+  .focus-drainers {
+    margin-top: -20px;
+  }
+
   .focus-drainers h2 {
     width: 236px;
   }
@@ -265,6 +269,10 @@ img {
   .focus-practices h2 {
     min-width: 236px;
     margin: 0;
+  }
+
+  .focus-images {
+    margin-top: 58px;
   }
 
   .focus-images__gallery {
@@ -308,7 +316,7 @@ img {
   }
 
   .footer {
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 
@@ -338,17 +346,19 @@ img {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    max-width: 1000px;
+    flex-wrap: wrap;
   }
 
-  .focus-drainers div div {
+  .focus-drainers .focus-drainers__container {
     display: flex;
     flex-direction: column;
     justify-content: start;
     gap: 0;
-    min-width: 315px;
+    max-width: 314px;
   }
 
-  .focus-drainers div div p {
+  .focus-drainers p {
     margin: 10px 0 0 0;
   }
 
