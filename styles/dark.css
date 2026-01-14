@@ -17,5 +17,6 @@
   --intermediate-text: rgba(255, 0, 112, 1); /* цвет текста h2 */
   --accent-color: rgba(255, 0, 112, 1); /* задний фон заголовков и тень*/
   --corner-color: rgba(255, 0, 112, 1); /* цвет уголков */
+  --hover-color: rgba(255, 0, 112, 0.4);
   --visible: visible;
 }

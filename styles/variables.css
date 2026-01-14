@@ -9,10 +9,13 @@
   --main-color-text: rgba(241, 178, 206, 1); /* цвет обычного текста */
   --title-color-text: rgba(219, 0, 255, 1); /* цвет заголовка */
   --subtitle-color-text: rgba(0, 0, 40, 1); /* цвет текста с фоном */
-    --intermediate-text: rgba(255, 0, 112, 1); /* цвет текста h2 */
+  --intermediate-text: rgba(255, 0, 112, 1); /* цвет текста h2 */
   --accent-color: rgba(255, 0, 112, 1); /* задний фон заголовков */
-  --corner-color: rgba(255, 0, 112, 1); /* цвет уголков */
+  --corner-color: rgba(255, 0, 112, 1); /* цвет уголков и навигации */
+  --hover-color: rgba(255, 0, 112, 0.4);
   --page-padding: 10px;
+  --content-padding: 50px;
+  --image-gap: 10px;
   --font-size: 18px;
   --line-height: 23.4px;
   --font-weight: 400;
